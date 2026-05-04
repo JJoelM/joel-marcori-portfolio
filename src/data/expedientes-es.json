@@ -1,0 +1,222 @@
+{
+  "ui_global": {
+    "boton_modo_plano": "[> MODO TEXTO PLANO]",
+    "boton_modo_3d": "[> MODO 3D]",
+    "boton_volver": "[X] VOLVER",
+    "expedientes": "EXPEDIENTES",
+    "expediente_cv": "[01] Sujeto: Joel (CV)",
+    "expediente_proyectos": "[02] Caso: Experiencia y Proyectos",
+    "cargando": "Cargando Entorno, Compilando Shaders...",
+    "idioma_es": "ESPAÑOL",
+    "idioma_en": "INGLÉS"
+  },
+
+  "ui_cv": {
+    "adjunto": "Adjunto: PDF_CV_Oficial",
+    "id": "ID:",
+    "alias": "ALIAS:",
+    "contacto": "CONTACTO:",
+    "pag_anterior": "◄ Pág. Anterior",
+    "hoja": "HOJA",
+    "de": "DE",
+    "pag_siguiente": "Pág. Siguiente ►",
+    "mensaje_bd": "Base de Datos Central",
+    "mensaje_nivel": "Nivel de Acceso: PÚBLICO // Mostrando registros..."
+  },
+  
+  "ui_modal": {
+    "registros_archivo": "REGISTROS DE ARCHIVO",
+    "imagen_no_disponible": "[IMAGEN_NO_DISPONIBLE]",
+    "ref": "REF:",
+    "fecha_reporte": "FECHA_REPORTE:",
+    "acceder_registro": "Acceder_al_Registro_Técnico ►"
+  },
+
+  "cvData": {
+    "label": "INVESTIGACIÓN: JOEL MARCORI",
+    "tag": "CONFIDENCIAL // NIVEL_4",
+    "paginas": [
+      {
+        "tipo": "INTRO",
+        "foto_url": "/images/perfil_joel.jpg",
+        "id": "MARCORI, JOEL JESÚS",
+        "alias": "Software Engineer, Technical Artist & Tools Programmer",
+        "titulo": "Resumen de Perfil",
+        "contacto": [
+          "EMAIL: joelmarcori1@gmail.com",
+          "LINKEDIN: linkedin.com/in/joel-jesus-marcori/",
+          "REPO: github.com/JJoelM"
+        ],
+        "historial": [
+          "Analista Programador Universitario (Título intermedio obtenido, Promedio: 8.65)",
+          "Licenciatura en Sistemas de Información (5to Año en curso, FaCENA-UNNE)",
+          "Adscripto universitario en: Algoritmos y Estructuras de Datos I, e Ingeniería del Software I.",
+          "Desarrollador FullStack e Ingeniero de IA con enfoque en arquitecturas escalables y experiencias narrativas",
+          "Game Master (TTRPGs), Diseñador de Sistemas Gamificados, y entusiasta de los juegos de mesa"
+        ]
+      },
+      {
+        "tipo": "EXPERIENCIA",
+        "titulo": "Historial Operativo",
+        "items": [
+          {
+            "title": "Lead FullStack Developer - Solución de Gestión Retail (OcioStore)",
+            "desc": "Ingeniería y desarrollo de una aplicación de escritorio corporativa en C# (.NET) y SQL Server. Diseño e implementación de interfaces de usuario (UI) escalables en Windows Forms centradas en la experiencia del usuario y la gestión masiva de datos. Implementación estricta de una Arquitectura de 4 capas para garantizar la escalabilidad, gestionando operaciones CRUD seguras, control de inventario y un visor de estadísticas dinámico para la toma de decisiones empresariales."
+          },
+          {
+            "title": "Full-Stack Web Developer - E-commerce (NegiCustom Store)",
+            "desc": "Desarrollo integral de una tienda web personalizada. Arquitectura frontend interactiva implementada con HTML, CSS y JS, respaldada por un backend robusto construido en PHP utilizando el framework CodeIgniter 4 y gestión de bases de datos relacionales en MySQL."
+          },
+          {
+            "title": "Technical Artist & Modelador 3D - Freelance (Fiverr)",
+            "desc": "Diseño, modelado y texturizado PBR de assets 3D para videojuegos, animación e impresión 3D atendiendo a clientes internacionales. Dominio del pipeline técnico en Blender y Substance Painter, desde la topología y el rigging hasta el weight painting, garantizando una integración fluida en motores gráficos."
+          },
+          {
+            "title": "Adscripto Docente Universitario - UNNE",
+            "desc": "Soporte académico y técnico para las cátedras de Algoritmos I e Ingeniería de Software 1. Asistencia en la enseñanza de lógica computacional, estructuras de control, patrones de diseño y metodologías de desarrollo, fortaleciendo habilidades de comunicación técnica y mentoría."
+          },
+          {
+            "title": "Investigador - UNNE",
+            "desc": "Integré el Grupo de Investigación en Calidad del Software (2024-2025)."
+          }
+        ]
+      },
+      {
+        "tipo": "EDUCACION",
+        "titulo": "Formación Académica",
+        "items": [
+          {
+            "title": "Licenciatura en Sistemas de Información | UNNE",
+            "desc": "2021 - Actualidad. Cursando 5to año y Proyecto Final de Carrera (Tesis enfocada en Gamificación e IA). Título intermedio de Analista Programador Universitario obtenido."
+          },
+          {
+            "title": "Técnico en Equipos e Instalaciones Electromecánicas | Esc. Téc. Bernardino Rivadavia",
+            "desc": "2013 - 2019. Promedio: 9.21. Egresado con honores. Galardonado como Abanderado por obtener el mejor promedio de la promoción. Adquisición temprana de bases lógicas y resolución de problemas técnicos complejos. Fundador del Club de Robótica."
+          },
+          {
+            "title": "Certificaciones Técnicas e Idiomas",
+            "desc": "Inglés: C1-EF SET (Avanzado técnico/conversacional). Cursos: Desarrollador Fullstack Python (Codo a Codo), Introducción a la IA (Domestika)."
+          },
+          {
+            "title": "Certificaciones Artísticas",
+            "desc": "Especialización en desarrollo de videojuegos con Unity (Codo a Codo 4.0). Flujo de animación (Sony) y formación continua en 3D (Libel Academy)."
+          }
+        ]
+      },
+      {
+        "tipo": "STACK",
+        "titulo": "Capacidades Técnicas",
+        "stack": [
+          "C# / .NET",
+          "Python / FastAPI",
+          "SQL / MySQL",
+          "React / React Three Fiber (WebGL)",
+          "Blender (Rigging / PBR)",
+          "Git / SCRUM",
+          "Unity",
+          "C++",
+          "Prompt Eng. / LangChain",
+          "PHP / CodeIgniter 4",
+          "C"
+        ]
+      }
+    ]
+  },
+
+  "expedientesData": {
+    "sistemas_software": {
+      "nombre_clasificacion": "Ingeniería y Sistemas",
+      "etiqueta_expediente": "Backend & Arquitectura",
+      "proyectos": [
+        {
+          "id": "ociostore",
+          "titulo": "OcioStore - Solución de Gestión Retail",
+          "fecha": "2025",
+          "stack": [
+            "C#",
+            ".NET",
+            "Windows Forms",
+            "SQL Server",
+            "Arquitectura 4 Capas",
+            "CRUD",
+            "Estadísticas"
+          ],
+          "descripcion": "Desarrollo de una solución de software de escritorio integral para la gestión de inventario, ventas y administración, con un módulo de visión de estadísticas, para una tienda de juegos de mesa. Separación estricta de responsabilidades mediante una arquitectura de 4 capas, garantizando la mantenibilidad del código. Optimización de consultas de base de datos SQL. Proyecto gestionado bajo metodologías ágiles (SCRUM) con mantenimiento exhaustivo de backlog.",
+          "imagen_url": "/images/projects/ocio_store.png",
+          "repo_url": "https://github.com/JCPSNMSnK/OcioStoreIngSoftII"
+        },
+        {
+          "id": "negicustom",
+          "titulo": "NegiCustom Store - E-commerce",
+          "fecha": "2024",
+          "stack": ["PHP", "CodeIgniter 4", "MySQL", "JavaScript", "HTML/CSS"],
+          "descripcion": "Plataforma de comercio electrónico Full-Stack desarrollada para la comercialización de productos personalizados. Implementación de un backend seguro con CodeIgniter 4 para la gestión del catálogo y sesiones de usuario, interconectado con un frontend dinámico e interactivo.",
+          "imagen_url": "/images/projects/negi_store.png",
+          "repo_url": "https://github.com/JJoelM/NegiCustom"
+        }
+      ]
+    },
+
+    "desarrollo_web": {
+      "nombre_clasificacion": "Web & Experiencias Interactivas",
+      "etiqueta_expediente": "Frontend",
+      "proyectos": [
+        {
+          "id": "portafolio_3d",
+          "titulo": "Portafolio Interactivo: Oficina de Detective (Este Sitio)",
+          "fecha": "Marzo 2026 - Abril 2026",
+          "stack": [
+            "React",
+            "Three.js (R3F)",
+            "Framer Motion",
+            "Tailwind CSS",
+            "Vite",
+            "i18next",
+            "Lighthouse Optimization"
+          ],
+          "descripcion": "Diseño y desarrollo de un portafolio web inmersivo en 3D. Fusión de conocimientos de ingeniería de software y Technical Art para crear un entorno de navegador interactivo. Fuerte enfoque en el rendimiento técnico, auditando métricas de Lighthouse, gestión de recursos gráficos e integración perfecta de componentes React con el ecosistema WebGL. Optimización utilizando compresión Draco, Texture Atlases horneados, y gestión de estado global. Incluye interpolación de cámara matemática y accesibilidad 2D dinámica.",
+          "imagen_url": "/images/projects/portfolio.png",
+          "repo_url": "https://github.com/..."
+        }
+      ]
+    },
+
+    "arte_3d": {
+      "nombre_clasificacion": "Technical Art y Modelado 3D",
+      "etiqueta_expediente": "EVIDENCIA VISUAL: Geometría y Texturas",
+      "proyectos": [
+        {
+          "id": "freelance_3d",
+          "titulo": "Producción de Assets Estilizados y PBR",
+          "fecha": "Abril 2021 - Actualidad",
+          "stack": ["Blender", "Substance Painter", "Rigify", "PBR Workflow"],
+          "descripcion": "Desarrollo técnico y artístico de modelos 3D a pedido (Fiverr). Amplia experiencia en el pipeline completo: modelado de alta y baja topología, horneado de normales (baking), texturizado PBR, y creación de esqueletos deformables (Rigging/Weight Painting) listos para su implementación en motores como Unity.",
+          "imagen_url": "/images/projects/3d.png",
+          "repo_url": "https://www.fiverr.com/"
+        }
+      ]
+    },
+
+    "ia_narrativa": {
+      "nombre_clasificacion": "Arquitectura de Software e IA",
+      "etiqueta_expediente": "INVESTIGACIÓN: Proyecto Final de Carrera",
+      "proyectos": [
+        {
+          "id": "pfc_gamificacion",
+          "titulo": "Plataforma Gamificada Educativa Asistida por IA",
+          "fecha": "Abril 2026 - Actualidad",
+          "stack": [
+            "CQRS",
+            "Event Sourcing",
+            "Gamification Design",
+            "Integración IA",
+            "Game Master Logic"
+          ],
+          "descripcion": "Proyecto Final de Carrera (Tesis). Desarrollo de un framework de gamificación diseñado para automatizar y reducir la carga cognitiva de los docentes. El núcleo del sistema utiliza patrones arquitectónicos de alta concurrencia (CQRS y Event Sourcing) combinados con asistencia de Inteligencia Artificial para la validación y generación dinámica de contenido educativo, inspirado en mecánicas de TTRPGs.",
+          "imagen_url": "/images/projects/placeholder_pfc.png",
+          "repo_url": "https://github.com/JJoelM"
+        }
+      ]
+    }
+  }
+}
