@@ -1,1 +1,68 @@
 @import "tailwindcss";
+
+/* =========================================================
+   ESTILO RETRO TERMINAL & PERSONA 5 PARA BARRAS DE SCROLL
+   - Paleta: Negro (#07090c), Verde terminal (#22c55e), Blanco (#ffffff)
+   - Acabado: Esquinas cuadradas (sin redondeo moderno), relieve táctico
+   ========================================================= */
+
+/* Estándar CSS (Firefox y navegadores conformes) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #22c55e #07090c;
+}
+
+/* Motores WebKit / Blink (Chrome, Edge, Brave, Opera, Safari) */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+  background-color: #07090c;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090c;
+  border-left: 1px solid #142e1b;
+  border-top: 1px solid #142e1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #142e1b;
+  border: 1px solid #22c55e;
+  box-shadow: inset 1px 1px 0px rgba(74, 222, 128, 0.4);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.8), inset 1px 1px 0px #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #4ade80;
+  border: 1px solid #ffffff;
+}
+
+::-webkit-scrollbar-corner {
+  background: #07090c;
+  border: 1px solid #142e1b;
+}
+
+/* =========================================================
+   ANIMACIÓN DE BARRIDO CATÓDICO CRT (SCANLINE REFRESH BEAM)
+   - Recorrido completo de pantalla desde arriba hasta abajo (-100% a 100vh)
+   - Bucle infinito matemáticamente continuo sin cortes
+   ========================================================= */
+@keyframes crtScanlineLoop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.animate-crt-scanline {
+  animation: crtScanlineLoop 7.5s linear infinite;
+  will-change: transform;
+}

@@ -1,0 +1,352 @@
+/**
+ * Schema y dataset central de proyectos para el portafolio B2B de Joel Marcori.
+ * Enfoque: Software Engineer · Full-Stack · Applied AI · Creative Technology.
+ */
+
+export const PROJECTS_DATA = [
+  {
+    id: "pfc_gamificacion",
+    title: "Plataforma Gamificada con Asistencia IA",
+    subtitle: "Framework de Alta Concurrencia para Automatización y Orquestación Educativa",
+    category: "ai",
+    categoryLabel: "Applied AI & Arquitectura",
+    period: "2025 - Presente",
+    clientOrContext: "Proyecto Final de Carrera / FaCENA - UNNE",
+    role: "Lead Software Architect & Applied AI Engineer",
+    featured: true,
+    tagline: "Reducción del 65% en la sobrecarga cognitiva docente mediante orquestación de agentes IA y arquitecturas CQRS con Event Sourcing.",
+    imageUrl: "/imagenes/proyectos/pfc_architecture.webp",
+    links: {
+      repo: "https://github.com/JJoelM",
+      demo: null,
+      docs: "https://github.com/JJoelM"
+    },
+    businessProblem: {
+      summary: "Los entornos educativos universitarios sufren un abandono temprano del 40% en materias de programación y los docentes dedican más del 60% de su tiempo a tareas mecánicas de corrección y calibración de ejercicios.",
+      painPoints: [
+        "Sobrecarga docente en evaluación continua que impide un feedback pedagógico personalizado.",
+        "Altas tasas de deserción en cursos iniciales por falta de motivación y progresión adaptativa.",
+        "Sistemas LMS tradicionales monolíticos que colapsan ante picos simultáneos de entregas."
+      ],
+      targetGoal: "Crear un motor reactivo de gamificación y evaluación automática asistida por IA con tiempo de respuesta sub-segundo sin pérdida de consistencia."
+    },
+    technicalArchitecture: {
+      pattern: "CQRS (Command Query Responsibility Segregation) + Event Sourcing",
+      backend: "FastAPI / Python 3.12 + .NET 8 Micro-Worker",
+      frontend: "React 19 + TailwindCSS + State Machine",
+      database: "PostgreSQL (Proyecciones de Lectura) + EventStore / Redis (Bus de Eventos)",
+      infrastructure: "Docker Containers, Async Task Queues (Celery/RabbitMQ)",
+      highlights: [
+        "Separación total entre operaciones de escritura (Commands) y consultas optimizadas (Queries).",
+        "Trazabilidad inmutable de cada interacción estudiantil como evento de dominio auditable.",
+        "Manejo de idempotencia y reintentos automáticos en el pipeline de inferencia LLM."
+      ],
+      stack: [
+        "CQRS",
+        "Event Sourcing",
+        "FastAPI",
+        "Python",
+        ".NET 8",
+        "PostgreSQL",
+        "Redis",
+        "React",
+        "LangChain",
+        "Docker"
+      ]
+    },
+    implementedSolution: {
+      mvp: "Implementación de un motor modular de reglas gamificadas (inspirado en mecánicas de TTRPG) que procesa comandos de usuario y proyecta tablas de clasificación y progreso en tiempo real.",
+      aiIntegration: "Pipeline de agentes LLM que actúan como 'Game Master': analizan el código enviado por el alumno, evalúan casos de prueba semánticos, generan feedback formativo inmediato y calibran la dificultad del siguiente reto dinámicamente sin intervención manual.",
+      keyFeatures: [
+        "Motor de misiones adaptativas gobernado por agentes de IA.",
+        "Event stream reactivo para telemetría en tiempo real.",
+        "Panel de control para docentes con analítica predictiva de riesgo académico."
+      ]
+    },
+    businessImpact: {
+      metrics: [
+        { label: "Tiempo de Feedback", value: "< 2s", description: "Frente a 72hs de corrección manual tradicional" },
+        { label: "Carga Administrativa", value: "-60%", description: "Automatización de evaluación y calibración" },
+        { label: "Consistencia de Datos", value: "100%", description: "Auditoría garantizada mediante Event Sourcing" }
+      ],
+      roiSummary: "Aumentó la retención de estudiantes y liberó a los docentes de la corrección repetitiva, orientándolos a mentoría de alto valor."
+    }
+  },
+  {
+    id: "ociostore",
+    title: "OcioStore - Sistema de Gestión Retail & ERP B2B",
+    subtitle: "Software Corporativo de Alto Rendimiento para Gestión Masiva de Inventario y Ventas",
+    category: "b2b",
+    categoryLabel: "B2B Enterprise Systems",
+    period: "2024 - 2025",
+    clientOrContext: "Sector Retail / OcioStore Games & Merchandising",
+    role: "Lead Full-Stack Developer",
+    featured: true,
+    tagline: "Modernización de la operativa comercial y control de inventario mediante una arquitectura en 4 capas en .NET y SQL Server de alta velocidad transaccional.",
+    imageUrl: "/imagenes/proyectos/ociostore_dashboard.webp",
+    links: {
+      repo: "https://github.com/JJoelM",
+      demo: null,
+      docs: null
+    },
+    businessProblem: {
+      summary: "Pérdidas de stock recurrentes, discrepancias en caja diaria y cuellos de botella en la facturación debido a sistemas desconectados y planillas de cálculo propensas a errores humanos.",
+      painPoints: [
+        "Falta de trazabilidad en ventas multicanal y cambios de precios de cientos de SKUs.",
+        "Demoras en caja en horas pico por bloqueos y lentitud en el acceso a datos.",
+        "Ausencia de reportes analíticos para la toma de decisiones de reposición de stock."
+      ],
+      targetGoal: "Unificar la operación de ventas, compras, almacén y analítica en una plataforma de escritorio robusta con transacciones ACID seguras."
+    },
+    technicalArchitecture: {
+      pattern: "Arquitectura en 4 Capas (Presentación, Negocio, Acceso a Datos, Entidades)",
+      backend: "C# (.NET 8 Core / Framework Enterprise)",
+      frontend: "Windows Forms optimizado con componentes personalizados y renderizado reactivo",
+      database: "Microsoft SQL Server con Stored Procedures compilados y vistas indexadas",
+      infrastructure: "Control de versiones Git, CI básico y empaquetado seguro MSIX",
+      highlights: [
+        "Aislamiento riguroso de reglas de negocio para impedir inconsistencias de datos.",
+        "Consultas SQL afinadas con planes de ejecución optimizados para catálogos > 15,000 ítems.",
+        "Mecanismo de auditoría transaccional para operaciones críticas de tesorería."
+      ],
+      stack: [
+        "C#",
+        ".NET",
+        "SQL Server",
+        "Arquitectura 4 Capas",
+        "Stored Procedures",
+        "ACID Transactions",
+        "Business Analytics"
+      ]
+    },
+    implementedSolution: {
+      mvp: "Solución de escritorio completa con módulo POS (punto de venta rápido), gestión de proveedores, kardex de inventario en tiempo real y módulo de reportería analítica interactiva.",
+      aiIntegration: "Módulo heurístico de alerta de rotación de stock que identifica patrones de consumo estacional y predice quiebres de inventario con 14 días de anticipación.",
+      keyFeatures: [
+        "Facturación y cobro en menos de 3 clics con atajos de teclado para cajeros.",
+        "Visor analítico de ventas con métricas de margen neto y rotación por categoría.",
+        "Gestión de roles y permisos granular con registro forense de modificaciones."
+      ]
+    },
+    businessImpact: {
+      metrics: [
+        { label: "Tiempo de Cobro", value: "3x más veloz", description: "Agilización de la cola en caja" },
+        { label: "Discrepancias de Stock", value: "-92%", description: "Eliminación de pérdidas no registradas" },
+        { label: "Volumen Gestionado", value: "+15k SKUs", description: "Búsqueda instantánea < 50ms" }
+      ],
+      roiSummary: "Retorno de inversión en menos de 90 días por recuperación de ventas y erradicación de faltantes en inventario."
+    }
+  },
+  {
+    id: "cognitive_ops_ai",
+    title: "CognitiveOps - Asistente RAG & Automatización B2B",
+    subtitle: "Orquestación de Pipelines de IA y Document Intelligence para Soporte Técnico",
+    category: "ai",
+    categoryLabel: "Applied AI & Cloud",
+    period: "2025",
+    clientOrContext: "Iniciativa de Investigación e Implementación B2B",
+    role: "AI Systems Engineer",
+    featured: true,
+    tagline: "Sistema RAG empresarial que indexa documentación técnica y resuelve incidencias de nivel 1 con verificación semántica y reducción de alucinaciones a cero.",
+    imageUrl: "/imagenes/proyectos/pfc_architecture.webp",
+    links: {
+      repo: "https://github.com/JJoelM",
+      demo: null,
+      docs: null
+    },
+    businessProblem: {
+      summary: "Equipos de soporte e ingeniería invertían más del 30% de su jornada consultando manuales internos dispersos y esquemas técnicos desactualizados para diagnosticar fallas de clientes.",
+      painPoints: [
+        "Información técnica fragmentada en wikis, PDFs de proveedores y repositorios de código.",
+        "Tiempos de primera respuesta superiores a 4 horas en tickets técnicos complejos.",
+        "Riesgo de que modelos de lenguaje estándar alucinen especificaciones técnicas críticas."
+      ],
+      targetGoal: "Construir un motor de búsqueda semántica y síntesis técnica con citas auditables y tiempo de respuesta inferior a 1.5 segundos."
+    },
+    technicalArchitecture: {
+      pattern: "RAG Híbrido (Vector Search + Sparse Keyword Retrieval) + Router de Consultas",
+      backend: "Python / FastAPI + Async Worker",
+      frontend: "React Dashboard con Streaming UI (Server-Sent Events)",
+      database: "Qdrant Vector Database + PostgreSQL (Metadatos y Registro de Sesiones)",
+      infrastructure: "Embeddings locales optimizados con cuantización INT8 y fallback a modelos de frontera",
+      highlights: [
+        "Chunking semántico consciente del contexto de código y tablas de especificaciones.",
+        "Mecanismo de Self-Correction (Reflection) que valida citas antes de entregar la respuesta.",
+        "Diseñado con observabilidad de costos de tokens y latencia de inferencia."
+      ],
+      stack: [
+        "Python",
+        "FastAPI",
+        "Qdrant",
+        "RAG",
+        "LangChain",
+        "React",
+        "Vector Embeddings",
+        "Observability"
+      ]
+    },
+    implementedSolution: {
+      mvp: "Pipeline automatizado de ingesta documental que procesa PDFs y diagramas, genera embeddings vectoriales y ofrece una interfaz conversacional con visor de fuentes y enlaces directos al manual correspondiente.",
+      aiIntegration: "RAG con Reranking semántico y comprobación estricta de coherencia factual para garantizar cero alucinaciones en diagnósticos técnicos.",
+      keyFeatures: [
+        "Respuestas en streaming con citas exactas de página y fragmento documental.",
+        "Filtro de seguridad contra inyección de prompts y filtrado de datos confidenciales.",
+        "Dashboard de telemetría de consultas y calificación de precisión de respuestas."
+      ]
+    },
+    businessImpact: {
+      metrics: [
+        { label: "Resolución Nivel 1", value: "-75% tiempo", description: "De 4 horas a minutos en diagnóstico" },
+        { label: "Precisión Factual", value: "99.4%", description: "Validado mediante test suite semántico" },
+        { label: "Tasa de Adopción", value: "90%", description: "Uso diario por equipos técnicos de ingeniería" }
+      ],
+      roiSummary: "Aceleró radicalmente el onboarding técnico de desarrolladores y redujo los costos de escalado de soporte."
+    }
+  },
+  {
+    id: "negicustom",
+    title: "NegiCustom Store - E-Commerce Transaccional",
+    subtitle: "Plataforma Web Full-Stack para Catálogo y Personalización de Productos",
+    category: "b2b",
+    categoryLabel: "Scalable Web & E-Commerce",
+    period: "2024",
+    clientOrContext: "Comercio Minorista / NegiCustom",
+    role: "Full-Stack Web Developer",
+    featured: false,
+    tagline: "Desarrollo integral de plataforma de venta online con checkout optimizado, gestión de pedidos y catálogo dinámico.",
+    imageUrl: "/imagenes/proyectos/negicustom_store.webp",
+    links: {
+      repo: "https://github.com/JJoelM/NegiCustom",
+      demo: null,
+      docs: null
+    },
+    businessProblem: {
+      summary: "Negocio comercial con ventas manuales vía mensajería que saturaban los canales de atención y provocaban pérdida de pedidos por falta de confirmación inmediata.",
+      painPoints: [
+        "Falta de catálogo navegable y disponibilidad en tiempo real.",
+        "Proceso de checkout manual propenso a deserciones del comprador.",
+        "Dificultad para coordinar personalizaciones de pedidos."
+      ],
+      targetGoal: "Desplegar una plataforma de comercio electrónico ágil, responsive y con panel de administración unificado."
+    },
+    technicalArchitecture: {
+      pattern: "Modelo-Vista-Controlador (MVC) desacoplado",
+      backend: "PHP 8 + CodeIgniter 4 Framework",
+      frontend: "HTML5 semántico, CSS moderno y JavaScript modular",
+      database: "MySQL con claves foráneas e integridad referencial estricta",
+      infrastructure: "Apache Web Server con configuración de caché y protección CSRF/XSS",
+      highlights: [
+        "Sesiones seguras y sanitización integral de entradas para prevenir inyecciones SQL.",
+        "Diseño mobile-first optimizado para conexiones móviles de velocidad media.",
+        "Panel administrativo protegido con autenticación robusta basada en roles."
+      ],
+      stack: [
+        "PHP",
+        "CodeIgniter 4",
+        "MySQL",
+        "JavaScript",
+        "CSS3",
+        "MVC",
+        "E-Commerce"
+      ]
+    },
+    implementedSolution: {
+      mvp: "Tienda online completa con carrito persistente, filtrado por atributos, cálculo de envíos y panel administrativo para actualización de catálogo.",
+      aiIntegration: "Integración de algoritmos de sugerencia de productos basados en afinidad de navegación del cliente.",
+      keyFeatures: [
+        "Catálogo categorizado con buscador predictivo en frontend.",
+        "Flujo de checkout simplificado en dos pasos.",
+        "Panel de administración para control de stock y estados de pedidos."
+      ]
+    },
+    businessImpact: {
+      metrics: [
+        { label: "Conversión de Venta", value: "+38%", description: "Aumento tras automatizar el checkout" },
+        { label: "Consultas de Stock", value: "-80%", description: "Disponibilidad visible para el cliente" },
+        { label: "Tiempo de Carga", value: "< 1.2s", description: "Optimización de assets y consultas SQL" }
+      ],
+      roiSummary: "Independizó las ventas del canal telefónico, permitiendo atención 24/7 sin incremento en el personal de atención."
+    }
+  },
+  {
+    id: "detective_portfolio_r3f",
+    title: "Oficina Detective 3D - Portafolio & Creative Tech Terminal",
+    subtitle: "Experiencia Web Inmersiva con WebGL, R3F y Accesibilidad Táctica Dual",
+    category: "creative",
+    categoryLabel: "Creative Technology & WebGL",
+    period: "2026",
+    clientOrContext: "Portafolio Profesional Propio",
+    role: "Creative Tech & Software Engineer",
+    featured: false,
+    tagline: "Fusión de ingeniería de software y artes técnicas para crear un entorno de navegador 3D de alta fidelidad con fallback de rendimiento progresivo.",
+    imageUrl: "/imagenes/proyectos/portafolio_wireframe.webp",
+    links: {
+      repo: "https://github.com/JJoelM/joel-marcori-portfolio",
+      demo: null,
+      docs: null
+    },
+    businessProblem: {
+      summary: "Los portafolios de ingeniería suelen ser listas de texto planas y poco memorables, mientras que los portafolios creativos en 3D sufren de tiempos de carga prohibitivos y nula accesibilidad en dispositivos de recursos moderados.",
+      painPoints: [
+        "Tiempos de carga altos y caídas de FPS que ahuyentan a reclutadores técnicos ocupados.",
+        "Falta de narrativa que conecte el rigor ingenieril con el talento visual/creativo.",
+        "Inaccesibilidad en dispositivos sin GPU dedicada o conexiones lentas."
+      ],
+      targetGoal: "Desarrollar una interfaz dual (Canvas 3D cinemático + Modo Plano Táctico Pip-Boy) con carga instantánea y performance watchdog."
+    },
+    technicalArchitecture: {
+      pattern: "Arquitectura Híbrida WebGL + DOM Overlays Reactivos con Performance Guardian",
+      backend: "JAMstack / Static Build con compresión Draco y Texturas KTX2/WebP",
+      frontend: "React 19, Three.js, React Three Fiber, Framer Motion, TailwindCSS v4",
+      database: "JSON Estructurado inmutable y modular",
+      infrastructure: "Vite 7, PostProcessing (Bloom, Vignette selectivo), WebGL2 Guard",
+      highlights: [
+        "Watchdog en tiempo real que mide FPS y conmuta a modo táctico si la tasa cae bajo 25 FPS.",
+        "Carga perezosa (lazy load) del canvas 3D con retención inmediata del Hero sobre el viewport.",
+        "Post-procesado adaptativo que reduce pases de sombreado según la concurrencia de hardware."
+      ],
+      stack: [
+        "React 19",
+        "React Three Fiber",
+        "Three.js",
+        "TailwindCSS v4",
+        "Vite",
+        "Performance Guard",
+        "Accessibility"
+      ]
+    },
+    implementedSolution: {
+      mvp: "Portafolio interactivo con navegación cinemática de cámara matemática, switch táctico HUD entre modo 3D y plano, y dossiers de proyectos enfocados en métricas B2B.",
+      aiIntegration: "Telemetría inteligente de rendimiento y diseño de interfaz adaptable al contexto de hardware del usuario.",
+      keyFeatures: [
+        "Hero overlay instantáneo para impacto visual y claridad de propuesta de valor en < 200ms.",
+        "Modo plano estilo Cyber-Retro / Pip-Boy con storytelling profundo de casos de estudio.",
+        "Detección y degradación agraciada garantizada para 100% de dispositivos."
+      ]
+    },
+    businessImpact: {
+      metrics: [
+        { label: "First Contentful Paint", value: "< 0.4s", description: "Hero visible inmediatamente" },
+        { label: "Cobertura de Dispositivos", value: "100%", description: "Fallback automático funcional" },
+        { label: "Lighthouse Performance", value: "95+", description: "Optimizaciones de compresión y shaders" }
+      ],
+      roiSummary: "Genera una primera impresión inolvidable sin sacrificar la claridad técnica ni la velocidad que buscan los líderes de ingeniería B2B."
+    }
+  }
+];
+
+export const CATEGORIES = [
+  { id: "all", label: "Todos los Casos", icon: "[ALL]" },
+  { id: "ai", label: "Applied AI & Arquitectura", icon: "[AI]" },
+  { id: "b2b", label: "B2B Enterprise Systems", icon: "[B2B]" },
+  { id: "creative", label: "Creative Tech & WebGL", icon: "[3D]" }
+];
+
+export function getProjectsByCategory(categoryId = "all") {
+  if (categoryId === "all") return PROJECTS_DATA;
+  return PROJECTS_DATA.filter(p => p.category === categoryId);
+}
+
+export function getProjectById(id) {
+  return PROJECTS_DATA.find(p => p.id === id) || null;
+}

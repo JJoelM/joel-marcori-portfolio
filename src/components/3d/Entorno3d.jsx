@@ -1,4 +1,4 @@
-import { useState, Suspense } from "react";
+import { useState, Suspense, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import { AnimatePresence } from "framer-motion";
 import { Sparkles, Loader } from "@react-three/drei";
@@ -8,6 +8,7 @@ import { PanelNavegacion } from "../ui/PanelNavegacion";
 import { ExpedienteCV } from "../ui/ExpedienteCV";
 import { ExpedienteProyectos } from "../ui/ExpedientesProyectos";
 import { LuzDetective, RayoVolumetrico } from "./ComponentesEspeciales";
+import { GuiaInteractiva3D } from "./GuiaInteractiva3D";
 
 const VISTAS = {
   INICIO: "INICIO",
@@ -15,14 +16,43 @@ const VISTAS = {
   PROYECTOS: "PROYECTOS",
 };
 
-export default function Entorno3D({ setModoApp }) {
+export default function Entorno3D({ setModoApp, onOpenContact }) {
   const DEBUG_MODE = false;
   const [vistaActual, setVistaActual] = useState(VISTAS.INICIO);
   const [esDeDia, setEsDeDia] = useState(false);
+  const [visionDetective, setVisionDetective] = useState(true);
+  const [musicaTrigger, setMusicaTrigger] = useState(0);
+  const [itemsInspeccionados, setItemsInspeccionados] = useState(() => new Set());
+
+  const handleItemInspected = useCallback((itemId) => {
+    setItemsInspeccionados((prev) => {
+      const next = new Set(prev);
+      next.add(itemId);
+      return next;
+    });
+  }, []);
+
+  const handleSeleccionarObjetivo = useCallback(
+    (id) => {
+      handleItemInspected(id);
+      if (id === "MONITOR") {
+        setModoApp("PLANO");
+      } else if (id === "CV") {
+        setVistaActual(VISTAS.CV);
+      } else if (id === "PROYECTOS") {
+        setVistaActual(VISTAS.PROYECTOS);
+      } else if (id === "LAMPARA") {
+        setEsDeDia((prev) => !prev);
+      } else if (id === "PARLANTE") {
+        setMusicaTrigger((prev) => prev + 1);
+      }
+    },
+    [handleItemInspected, setModoApp]
+  );
 
   return (
-    <div className="w-full h-full relative flex">
-      <div className="flex-grow h-full bg-[#030305]">
+    <div className="w-full h-full relative flex flex-col md:flex-row overflow-hidden">
+      <div className="flex-1 w-full h-full bg-[#030305] relative overflow-hidden">
         <Canvas
           shadows
           dpr={[1, 1.5]}
@@ -88,7 +118,7 @@ export default function Entorno3D({ setModoApp }) {
                 castShadow
                 shadow-bias={-0.0001}
                 shadow-normalBias={0.02}
-                shadow-mapSize={[1024, 1024]}
+                shadow-mapSize={[512, 512]}
               >
                 <object3D attach="target" position={[0.15, 0.1, 0.5]} />
               </LuzDetective>
@@ -102,54 +132,9 @@ export default function Entorno3D({ setModoApp }) {
             </>
           )}
 
-          {/* ---- FOCO TABLERO ---- */}
-          <LuzDetective
-            debug={DEBUG_MODE}
-            position={[0, 3.15, -2.4]}
-            angle={1.5}
-            penumbra={esDeDia ? 0.9 : 0.5}
-            intensity={esDeDia ? 20 : 10}
-            color={esDeDia ? "#ffe8b5" : "#ffd48a"}
-            distance={4}
-            castShadow
-            shadow-bias={-0.0006}
-            shadow-normalBias={0.06}
-            shadow-mapSize={[1024, 1024]}
-          >
-            <object3D
-              attach="target"
-              position={esDeDia ? [-0.2, 0, 0.8] : [0, 0, -3]}
-            />
-          </LuzDetective>
-
-          {/* --------------------------------------------------------
-              PARTÍCULAS Y POST-PROCESADO
-              -------------------------------------------------------- */}
+          {/* Polvo en el rayo de la ventana (optimizado para balance visual y framerate) */}
           <Sparkles
-            count={150}
-            scale={4}
-            size={1.5}
-            speed={0.2}
-            opacity={0.05}
-            color={esDeDia ? "#fffae6" : "#ffd48a"}
-            position={[0, 1.5, 0]}
-          />
-
-          {!esDeDia && (
-            <Sparkles
-              count={30}
-              scale={[1.2, 1.5, 1.2]} // Confinado al área del escritorio
-              size={1}
-              speed={0.1} // Flota suavemente
-              opacity={0.15}
-              color="#ffc87f" // Tono que coincide con la bombilla
-              position={[-0.8, 1.4, 0.3]} // Centrado en la luz de la lámpara
-            />
-          )}
-
-          {/* Polvo en el rayo de la ventana */}
-          <Sparkles
-            count={esDeDia ? 300 : 100}
+            count={esDeDia ? 180 : 80}
             scale={[5, 3, 2]}
             size={1}
             speed={0.3}
@@ -161,9 +146,10 @@ export default function Entorno3D({ setModoApp }) {
           <Suspense fallback={null}>
             <EffectComposer multisampling={0}>
               <Bloom
-                luminanceThreshold={0.2}
-                luminanceSmoothing={0.9}
+                luminanceThreshold={0.25}
+                luminanceSmoothing={0.8}
                 intensity={esDeDia ? 0.15 : 0.3}
+                mipmapBlur={true}
               />
               <Vignette
                 eskil={false}
@@ -178,19 +164,34 @@ export default function Entorno3D({ setModoApp }) {
               setVistaActual={setVistaActual}
               vistas={VISTAS}
               toggleDiaNoche={() => setEsDeDia(!esDeDia)}
+              visionDetective={visionDetective}
+              setVisionDetective={setVisionDetective}
+              onItemInspected={handleItemInspected}
+              musicaTrigger={musicaTrigger}
             />
           </Suspense>
         </Canvas>
         <Loader />
+
+        {/* --------------------------------------------------------
+            GUÍA INTERACTIVA & TUTORIAL ESTILO VIDEOJUEGO (HUD 3D)
+            -------------------------------------------------------- */}
+        <GuiaInteractiva3D
+          visionDetective={visionDetective}
+          setVisionDetective={setVisionDetective}
+          itemsInspeccionados={itemsInspeccionados}
+          onSeleccionarObjetivo={handleSeleccionarObjetivo}
+        />
       </div>
 
       {/* --------------------------------------------------------
-          INTERFAZ DE USUARIO
+          INTERFAZ DE USUARIO: PANEL DE NAVEGACIÓN
           -------------------------------------------------------- */}
       <PanelNavegacion
         vistaActual={vistaActual}
         setVistaActual={setVistaActual}
         vistas={VISTAS}
+        onOpenContact={onOpenContact}
       />
 
       <AnimatePresence>

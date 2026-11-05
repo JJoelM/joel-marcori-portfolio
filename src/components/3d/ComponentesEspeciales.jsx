@@ -5,12 +5,12 @@ import { useHelper } from "@react-three/drei";
 // --- LUZ CON HELPER  ---
 
 export function LuzDetective({ debug, ...props }) {
-  const lightRef = useRef(); // Si debug es true, añade el helper de SpotLight (color cian)
+  const lightRef = useRef();
   useHelper(debug ? lightRef : null, THREE.SpotLightHelper, "cyan");
   return <spotLight ref={lightRef} {...props} />;
 }
 
-// --- SHADER VOLUMÉTRICA  ---
+// --- SHADER VOLUMÉTRICO OPTIMIZADO ---
 
 export function RayoVolumetrico({
   debug,
@@ -19,28 +19,29 @@ export function RayoVolumetrico({
   radioPunta = 0.1,
   radioBase = 1.5,
   altura = 3,
-  color,
-  opacity,
+  color = "#8da3d4",
+  opacity = 0.08,
 }) {
   const groupRef = useRef();
 
-  // El grupo mira al objetivo
+  // El grupo apunta al objetivo vectorial
   useLayoutEffect(() => {
     if (groupRef.current) {
       groupRef.current.lookAt(new THREE.Vector3(...target));
     }
   }, [target]);
 
-  // Crea el objeto de variables GPU una sola vez en la vida del componente
+  // Uniforms GPU estables
   const uniforms = useMemo(
     () => ({
       uColor: { value: new THREE.Color(color) },
       uOpacity: { value: opacity },
     }),
-    [] // El array vacío es para que no se vuelva a crear
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
   );
 
-  // Se actualizan los valores cuando las props cambian
+  // Actualización reactiva sin recrear el material
   useLayoutEffect(() => {
     uniforms.uColor.value.set(color);
     uniforms.uOpacity.value = opacity;
@@ -51,7 +52,8 @@ export function RayoVolumetrico({
       {debug && <axesHelper args={[2]} />}
 
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, altura / 2]}>
-        <cylinderGeometry args={[radioPunta, radioBase, altura, 32, 1, true]} />
+        {/* Optimización de geometría: 18 segmentos radiales en lugar de 32 (ahorro del 44% de vértices) */}
+        <cylinderGeometry args={[radioPunta, radioBase, altura, 18, 1, true]} />
 
         <shaderMaterial
           transparent={true}
@@ -63,15 +65,18 @@ export function RayoVolumetrico({
             varying vec3 vNormal;
             varying vec3 vPosition;
             varying vec2 vUv;
+
             void main() {
               vUv = uv;
-              vNormal = normalize(normalMatrix * normal);
+              vNormal = normalMatrix * normal;
               vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
               vPosition = mvPosition.xyz;
               gl_Position = projectionMatrix * mvPosition;
             }
           `}
           fragmentShader={`
+            precision mediump float;
+
             varying vec3 vNormal;
             varying vec3 vPosition;
             varying vec2 vUv;
@@ -80,11 +85,15 @@ export function RayoVolumetrico({
 
             void main() {
               vec3 viewDir = normalize(-vPosition);
-              float fresnel = abs(dot(viewDir, vNormal));
-              fresnel = pow(fresnel, 2.5);
+              vec3 normal = normalize(vNormal);
+              float fresnel = abs(dot(viewDir, normal));
+
+              // Optimización matemática: sustitución de pow(fresnel, 2.5) por operaciones ALU directas
+              float fresnel2 = fresnel * fresnel;
+              float fresnelOpt = fresnel2 * sqrt(max(0.0, fresnel));
 
               float verticalFade = smoothstep(0.0, 0.7, vUv.y);
-              float finalAlpha = fresnel * verticalFade * uOpacity;
+              float finalAlpha = fresnelOpt * verticalFade * uOpacity;
 
               gl_FragColor = vec4(uColor, finalAlpha);
             }

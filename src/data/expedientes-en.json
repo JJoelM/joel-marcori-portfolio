@@ -8,9 +8,10 @@
     "expediente_proyectos": "[02] Case: Experience & Projects",
     "cargando": "Loading Environment, compiling shaders... ",
     "idioma_es": "SPANISH",
-    "idioma_en": "ENGLISH"
+    "idioma_en": "ENGLISH",
+    "btn_contacto": "[ CONTACT ]",
+    "expediente_contacto": "[03] Dispatch: Fast Contact"
   },
-
   "ui_cv": {
     "adjunto": "Attachment: Official_CV_PDF",
     "id": "ID:",
@@ -23,7 +24,6 @@
     "mensaje_bd": "Central Database",
     "mensaje_nivel": "Access Level: PUBLIC // Showing records..."
   },
-
   "ui_modal": {
     "registros_archivo": "ARCHIVE RECORDS",
     "imagen_no_disponible": "[IMAGE_UNAVAILABLE]",
@@ -31,7 +31,6 @@
     "fecha_reporte": "REPORT_DATE:",
     "acceder_registro": "Access_Technical_Record ►"
   },
-
   "cvData": {
     "label": "INVESTIGATION: JOEL MARCORI",
     "tag": "CONFIDENTIAL // LEVEL_4",
@@ -48,11 +47,11 @@
           "REPO: github.com/JJoelM"
         ],
         "historial": [
-          "University Programmer Analyst (Associate Degree equivalent obtained, GPA: 8.65/10)",
-          "B.S. in Information Systems (5th Year Senior, FaCENA-UNNE)",
-          "Teaching Assistant for: Algorithms & Data Structures I, and Software Engineering I.",
-          "Full-Stack Developer & AI Engineer focused on scalable architectures and narrative experiences",
-          "Game Master (TTRPGs), Gamified Systems Designer, and board game enthusiast"
+          "B.S. in Information Systems (Degree obtained in 2026, FaCENA-UNNE)",
+          "University Programmer Analyst (Associate Degree obtained, GPA: 8.65/10)",
+          "Specialized in Distributed Architectures (.NET/Python), Event Sourcing, CQRS & Applied AI",
+          "University Teaching Assistant for: Algorithms & Data Structures I, and Software Engineering I",
+          "Game Master (TTRPGs): Applying system dynamics, incentive structures & intuitive UX to enterprise software"
         ]
       },
       {
@@ -60,7 +59,11 @@
         "titulo": "Operational History",
         "items": [
           {
-            "title": "Lead Full-Stack Developer - Retail Management Solution (OcioStore)",
+            "title": "Software Architect & Core Developer - HITL Gamification Platform (Thesis)",
+            "desc": "Distributed microservices architecture (.NET 9, CQRS with MediatR, Event Sourcing, and PostgreSQL 17 on Docker) paired with a generative AI service (Python, FastAPI, and Google Gemini SDK) under a Human-in-the-Loop model, featuring a React 18 frontend with TTRPG mechanics (Boss Fights, Timelines, and Cosmetic Bazaar)."
+          },
+          {
+            "title": "Full-Stack Architect & Core Developer - Retail Management Solution (OcioStore)",
             "desc": "Engineered and developed an enterprise desktop application using C# (.NET) and SQL Server. Designed and implemented scalable Windows Forms UIs focusing on user experience and bulk data management. Strictly adhered to a 4-Tier Architecture to ensure scalability, handling secure CRUD operations, inventory control, and a dynamic statistical dashboard for business decision-making."
           },
           {
@@ -78,6 +81,10 @@
           {
             "title": "Research Assistant - UNNE",
             "desc": "Member of the Software Quality Research Group (2024-2025)."
+          },
+          {
+            "title": "Network Systems & Scientific Computing Engineering - R&D",
+            "desc": "Design of concurrent client-server systems with raw native TCP/UDP sockets (threading, locks, and packet telemetry) and development of numerical computing suites for matrix algebra, interpolation, and differential equation solvers (RK4), cementing core low-level algorithmic foundations for real-time simulation and Technical Art."
           }
         ]
       },
@@ -86,8 +93,8 @@
         "titulo": "Academic Background",
         "items": [
           {
-            "title": "B.S. in Information Systems | UNNE",
-            "desc": "2021 - Present. Currently a 5th-year senior completing my Final Degree Project (Thesis focused on Gamification and AI). Intermediate degree of University Programmer Analyst already obtained."
+            "title": "B.S. in Information Systems | FaCENA-UNNE",
+            "desc": "2021 - 2026. Bachelor of Science degree obtained (Graduated in 2026). Final Degree Project (Thesis): AI-Powered Educational Gamification Platform (HITL & RPG). Prior university degree obtained: University Programmer Analyst (GPA: 8.65/10)."
           },
           {
             "title": "Electromechanical Equipment & Installations Technician | Esc. Téc. Bernardino Rivadavia",
@@ -95,7 +102,7 @@
           },
           {
             "title": "Technical Certifications & Languages",
-            "desc": "English: C1-EF SET (Advanced technical/conversational). Courses: Full-Stack Python Developer (Codo a Codo), Intro to AI (Domestika)."
+            "desc": "English: C1-EF SET (Advanced technical & conversational). Full-Stack Python Developer Specialization (Codo a Codo)."
           },
           {
             "title": "Artistic Certifications",
@@ -122,7 +129,6 @@
       }
     ]
   },
-
   "expedientesData": {
     "sistemas_software": {
       "nombre_clasificacion": "Engineering & Systems",
@@ -149,14 +155,19 @@
           "id": "negicustom",
           "titulo": "NegiCustom Store - E-commerce",
           "fecha": "2024",
-          "stack": ["PHP", "CodeIgniter 4", "MySQL", "JavaScript", "HTML/CSS"],
+          "stack": [
+            "PHP",
+            "CodeIgniter 4",
+            "MySQL",
+            "JavaScript",
+            "HTML/CSS"
+          ],
           "descripcion": "Full-Stack e-commerce platform developed for selling custom products. Implemented a secure backend with CodeIgniter 4 for catalog and user session management, seamlessly interfaced with a dynamic and interactive frontend.",
           "imagen_url": "/images/projects/negi_store.png",
           "repo_url": "https://github.com/JJoelM"
         }
       ]
     },
-
     "desarrollo_web": {
       "nombre_clasificacion": "Web & Interactive Experiences",
       "etiqueta_expediente": "Frontend",
@@ -180,7 +191,6 @@
         }
       ]
     },
-
     "arte_3d": {
       "nombre_clasificacion": "Technical Art & 3D Modeling",
       "etiqueta_expediente": "VISUAL EVIDENCE: Geometry & Textures",
@@ -189,34 +199,294 @@
           "id": "freelance_3d",
           "titulo": "Stylized & PBR Asset Production",
           "fecha": "April 2021 - Present",
-          "stack": ["Blender", "Substance Painter", "Rigify", "PBR Workflow"],
+          "stack": [
+            "Blender",
+            "Substance Painter",
+            "Rigify",
+            "PBR Workflow"
+          ],
           "descripcion": "Technical and artistic development of custom 3D models (Fiverr). Extensive experience in the complete pipeline: high and low poly modeling, normal baking, PBR texturing, and creating deformable skeletons (Rigging/Weight Painting) ready for implementation in engines like Unity.",
           "imagen_url": "/images/projects/3d.png",
           "repo_url": "https://www.fiverr.com/"
         }
       ]
     },
-
     "ia_narrativa": {
       "nombre_clasificacion": "Software Architecture & AI",
       "etiqueta_expediente": "INVESTIGATION: Final Degree Project",
       "proyectos": [
         {
           "id": "pfc_gamificacion",
-          "titulo": "AI-Assisted Educational Gamification Platform",
+          "titulo": "AI-Powered Educational Gamification Platform (HITL & RPG)",
           "fecha": "April 2026 - Present",
           "stack": [
-            "CQRS",
-            "Event Sourcing",
-            "Gamification Design",
-            "AI Integration",
-            "Game Master Logic"
+            ".NET 9 (C#)",
+            "CQRS & Event Sourcing",
+            "Python (FastAPI)",
+            "Google Gemini API",
+            "PostgreSQL 17 (Docker)",
+            "React 18 & Tailwind CSS v4",
+            "Zustand & React Query",
+            "TTRPG Mechanics / Boss Fights"
           ],
-          "descripcion": "Final Degree Project (Thesis). Developed a gamification framework designed to automate and reduce the cognitive load on teachers. The system's core utilizes high-concurrency architectural patterns (CQRS and Event Sourcing) combined with Artificial Intelligence assistance for validation and dynamic generation of educational content, inspired by TTRPG mechanics.",
-          "imagen_url": "/images/projects/placeholder_pfc.png",
+          "descripcion": "Final Degree Project (Engineering Thesis). Distributed educational gamification ecosystem using a decoupled microservices architecture with generative AI quest creation under a strict HITL (Human-in-the-Loop) paradigm: AI generates structured encounters with confidence scores while educators validate and adjust via live simulation. High-performance .NET 9 WebAPI implementing CQRS (MediatR) and relational Event Sourcing over PostgreSQL 17 with secure HttpOnly JWT cookies. Python/FastAPI microservice integrating the official Google Gemini SDK. Interactive React 18 frontend featuring a 'Painterly RPG' aesthetic, tactical multi-phase boss fights, interactive historical timelines, real-time classroom leaderboards, and an academic achievement cosmetic bazaar.",
+          "imagen_url": "/images/projects/gamificacion_pfc.png",
+          "repo_url": "https://github.com/JJoelM/GamificationProject"
+        }
+      ]
+    },
+    "sistemas_bajo_nivel_algoritmos": {
+      "nombre_clasificacion": "Network Systems & Scientific Computing",
+      "etiqueta_expediente": "R&D LAB: Concurrency & Numerical Algebra",
+      "proyectos": [
+        {
+          "id": "sockets_tcp_udp",
+          "titulo": "Concurrent Network Architecture & Communication Protocols (TCP/UDP)",
+          "fecha": "2025",
+          "stack": [
+            "Python",
+            "Raw Sockets (AF_INET)",
+            "TCP (Stream) vs UDP (Dgram)",
+            "Multi-threading",
+            "Locks & Concurrency",
+            "Telemetry & Logging"
+          ],
+          "descripcion": "Design and implementation of a low-level client-server network communication system built directly with native OS sockets, avoiding high-level frameworks. In-depth comparative analysis between connection-oriented stream reliability (TCP) and stateless low-latency datagram broadcasting (UDP). Features a multi-threaded server architecture with thread-safe client synchronization (threading.Lock), connection lifecycle management, graceful handling of unexpected client disconnections, socket reuse (SO_REUSEADDR), and a desktop inspection client with real-time packet telemetry and logging.",
+          "imagen_url": "/images/projects/sockets_network.svg",
+          "repo_url": "https://github.com/JJoelM"
+        },
+        {
+          "id": "metodos_numericos",
+          "titulo": "Scientific Computing & Numerical Analysis Engine (Algebra & ODEs)",
+          "fecha": "2025",
+          "stack": [
+            "Python",
+            "NumPy",
+            "Matplotlib",
+            "Computational Linear Algebra",
+            "Gaussian Elimination",
+            "Runge-Kutta (RK4)",
+            "Newton-Gregory Interpolation"
+          ],
+          "descripcion": "Development of a computational mathematics and numerical analysis engine focused on solving continuous mathematical models. Features non-linear root finding (Newton-Raphson, Fixed-Point), linear system solving via Gaussian Elimination with partial pivoting, finite difference polynomial interpolation (Newton-Gregory), numerical quadrature (Trapezoidal, Simpson 1/3 and 3/8), and Ordinary Differential Equation (ODE) solving via 4th-order Runge-Kutta (RK4) and predictor-corrector methods. Serves as foundational mathematical rigor directly applicable to physics simulations, shaders, and 3D Technical Art.",
+          "imagen_url": "/images/projects/metodos_numericos.svg",
           "repo_url": "https://github.com/JJoelM"
         }
       ]
     }
+  },
+  "ui_plano": {
+    "titulo_ventana": "C:\\SYS\\PORTFOLIO.EXE -- [OPERATOR: JOEL MARCORI // LEVEL_4]",
+    "badge_identidad": "SOFTWARE ENGINEER // FULL-STACK // APPLIED AI // TECHNICAL ARTIST",
+    "descripcion_hero": "Software engineering and distributed architecture combined with Applied Artificial Intelligence and 3D Technical Art. Solving enterprise business problems through technical rigor and interactive experience design.",
+    "btn_lanzar_3d": "[► LAUNCH 3D ENVIRONMENT]",
+    "subtitulo_3d": "DETECTIVE OFFICE // INTERACTIVE WEBGL CANVAS",
+    "contador_proyectos": "TOTAL PROJECTS",
+    "contador_proyectos_sub": "AUDITED RECORDS",
+    "contador_antiguedad": "TECHNICAL SENIORITY",
+    "contador_antiguedad_sub": "TRAJECTORY (SINCE 2019)",
+    "contador_promedio": "ACADEMIC GPA",
+    "contador_promedio_sub": "B.S. IN SYSTEMS & APU (FaCENA-UNNE)",
+    "contador_ingles": "PROFESSIONAL ENGLISH",
+    "contador_ingles_sub": "CERTIFIED EF SET (C1)",
+    "tab_proyectos": "[01] B2B CASE STUDIES",
+    "tab_art_3d": "[02] TECHNICAL ART & 3D (ARTISTIC SIDE)",
+    "tab_historial": "[03] OPERATIONAL HISTORY & UNNE",
+    "tab_stack": "[04] SKILLS & TECH MATRIX",
+    "filtro_label": "FILTER CASE:",
+    "filtro_todos": "ALL",
+    "btn_repo": "[► VIEW REPOSITORY / CODE]",
+    "art_3d_banner": "TECHNICAL ART, TOPOLOGY & REAL-TIME SHADERS",
+    "art_3d_desc": "The direct bridge between computational engineering and graphic fidelity. 3D modeling, deformable rigging, PBR baking, and GLSL shaders for browsers and game engines.",
+    "card_pbr_titulo": "HIGH-PERFORMANCE 3D PIPELINE",
+    "card_pbr_tech": "BLENDER // SUBSTANCE PAINTER // PBR",
+    "card_pbr_p1": "PBR Workflow: Creation of high-poly models for normal baking onto optimized low-poly meshes. Distortion-free UV mapping and packed channel textures (ORM: Occlusion, Roughness, Metallic).",
+    "card_pbr_p2": "Rigging & Skinning: Kinematic skeletal rigs with manual weight painting to prevent unwanted mesh pinching during complex animations in Unity and WebGL.",
+    "card_pbr_spec1": "POLYGON BUDGET: ~8,000 - 15,000 Tris per model",
+    "card_pbr_spec2": "TEXTURE MAPS: 2K PBR (DirectX/OpenGL Normals, Roughness, Metalness)",
+    "card_pbr_spec3": "DELIVERY FORMATS: .GLB / .FBX optimized with Draco compression",
+    "card_webgl_titulo": "WEBGL ENGINEERING & SHADERS",
+    "card_webgl_tech": "THREE.JS // R3F // GLSL",
+    "card_webgl_p1": "Detective Office 3D: The environment in this portfolio was modeled end-to-end in Blender, textured with cinematic lighting, and rendered via Three.js and React Three Fiber.",
+    "card_webgl_p2": "Graphics Optimization: Baked Texture Atlasing reducing Draw Calls below 45 per frame, volumetric fog, and post-processing with calibrated bloom.",
+    "card_webgl_spec1": "LIGHTHOUSE PERFORMANCE: 95+",
+    "card_webgl_spec2": "CAMERA INTERPOLATION: Mathematical easing damp3",
+    "card_webgl_spec3": "FALLBACK SYSTEM: Automatic graceful degradation when WebGL is absent",
+    "btn_ver_dossier_3d": "[ VIEW TECHNICAL DOSSIER IN PROJECTS → ]",
+    "btn_ver_dossier_webgl": "[ VIEW WEBGL ARCHITECTURE RECORD → ]",
+    "menu_file": "[File::Dossier]",
+    "menu_crt": "[Screen::Scanlines]",
+    "tooltip_minimizar": "Minimize (Return to Home)",
+    "tooltip_cerrar_3d": "Close Flat Mode / Launch 3D Environment",
+    "status_bar_ready": "STATUS: MEMORY_OK // 0 ERRORS",
+    "btn_descargar_cv": "[DOWNLOAD CV / PDF]",
+    "btn_copiar_email": "[COPY EMAIL]",
+    "email_copiado": "Email copied to clipboard!",
+    "easter_egg_notif": "PIP-BOY PHOSPHOR GREEN MATRIX MODE ENGAGED",
+    "seccion_historial_titulo": "// ENGINEERING OPERATIONAL HISTORY",
+    "seccion_educacion_titulo": "// ACADEMIC BACKGROUND & HONORS",
+    "seccion_stack_titulo": "Skills & Technologies Matrix",
+    "seccion_stack_sub": "Stack validated in production and academic research projects.",
+    "stack_col1_titulo": "[01] BACKEND & ARCHITECTURE",
+    "stack_col2_titulo": "[02] APPLIED AI & RESEARCH",
+    "stack_col3_titulo": "[03] CREATIVE TECH & 3D",
+    "cv_pdf_file": "/documents/Joel_Marcori_CV_EN.pdf",
+    "tab_trayectoria": "[00] TRAJECTORY // TIMELINE",
+    "btn_ver_recorrido": "[ VIEW NARRATIVE TIMELINE → ]"
+  },
+  "ui_landing": {
+    "badge_terminal": "PORTFOLIO // TERMINAL V2.4",
+    "badge_noir": "CASE FILE // BUREAU 1947",
+    "titulo_intro": "ACCESS PORTAL",
+    "subtitulo": "Software Engineer · Applied AI · Creative Technology",
+    "intro_narrativa": "Solving complex challenges by combining high-performance software architecture, applied AI systems, and interactive technology.",
+    "modo_3d_tag": "MODE 01 // 3D CANVAS",
+    "modo_3d_titulo": "3D OFFICE",
+    "modo_3d_desc": "Navigable Three.js environment featuring GLSL shaders, cinematic lighting, and spatial audio.",
+    "btn_modo_3d": "[ ENTER 3D OFFICE → ]",
+    "modo_plano_tag": "MODE 02 // TACTICAL HUD",
+    "modo_plano_titulo": "PLAIN MODE",
+    "modo_plano_desc": "Optimized tactical view: B2B architecture (.NET 8, CQRS), AI agents, and official CV download.",
+    "btn_modo_plano": "[ ENTER PLAIN MODE → ]",
+    "toggle_tema_noir": "THEME: NOIR",
+    "toggle_tema_cyber": "THEME: CYBER",
+    "telemetria_gpu": "GPU",
+    "telemetria_cores": "CORES",
+    "hud_switch_plano": "[ PLAIN MODE ]",
+    "hud_switch_3d": "[ 3D MODE ]",
+    "hud_switch_inicio": "[ HOME ]",
+    "hud_tooltip": "Freely switch between 3D Experience and Tactical Plain Mode",
+    "sello_confidencial": "CONFIDENTIAL // LEVEL 4"
+  },
+  "ui_trayectoria": {
+    "titulo": "TRAJECTORY // ENGINEER'S TIMELINE",
+    "subtitulo": "From logic and electromechanical foundations to B2B software architecture and Applied AI",
+    "btn_ir_a_proyectos": "[ EXPLORE B2B CASE STUDIES → ]",
+    "badge_scrollytelling": "SCROLLYTELLING // RESEARCH CHAPTERS",
+    "capitulos": [
+      {
+        "numero": "01",
+        "periodo": "2013 - 2019",
+        "titulo": "Roots in Engineering & Robotics: Forging Rigorous Logic",
+        "rol": "Electromechanical Technician // Robotics Club Founder",
+        "badge": "VALEDICTORIAN GRADUATE (GPA: 9.21)",
+        "narrativa": "My technical journey began with analog circuits, pneumatic control, and C programming for microcontrollers. Founding the Robotics Club taught me fault tolerance, methodical diagnostics, and that software always operates within real-world constraints.",
+        "problema_resuelto": "Designed and deployed automated test benches and robotic prototypes with zero tolerance for wiring errors.",
+        "quote_persona5": "A system's resilience is forged before writing the first line of code.",
+        "skills": [
+          "C / Microcontrollers",
+          "Digital Logic",
+          "Fault Diagnostics",
+          "Technical Leadership"
+        ],
+        "metrica_clave": "9.21 / 10",
+        "metrica_desc": "Top promotion graduate (Valedictorian)"
+      },
+      {
+        "numero": "02",
+        "periodo": "2021 - 2026",
+        "titulo": "Algorithms, Data Structures & Academic Rigor",
+        "rol": "B.S. in Information Systems (2026 Graduate) // APU // Teaching Assistant",
+        "badge": "APU GPA: 8.65 / 10",
+        "narrativa": "At FaCENA-UNNE, I formalized my mastery of algorithmic complexity, data structures, and design patterns. As a Teaching Assistant for Algorithms I and Software Engineering 1, I mentored hundreds of students, translating abstract concepts into clean architectures.",
+        "problema_resuelto": "Reduced failure rates in foundational courses via practical algorithmic decomposition guides and live debugging sessions.",
+        "quote_persona5": "You do not truly master a data structure until you can explain it with crystal clarity.",
+        "skills": [
+          "Algorithms & Complexity",
+          "Data Structures",
+          "GoF Design Patterns",
+          "Technical Mentorship"
+        ],
+        "metrica_clave": "+300 Students",
+        "metrica_desc": "Students mentored in Algorithms & Software Patterns"
+      },
+      {
+        "numero": "03",
+        "periodo": "Ongoing",
+        "titulo": "The Game Master Factor: System Psychology, Incentives & UX",
+        "rol": "Game Master (TTRPGs) // Gamified Systems Designer",
+        "badge": "RULES DESIGN & FEEDBACK LOOPS",
+        "narrativa": "Running tabletop RPGs for years is a live product engineering laboratory. A Game Master manages concurrent rules, balances resource economies under uncertainty, and maintains engagement without cognitive overload. I translated these mechanics into enterprise software: every user flow must be clear, predictable, and rewarding.",
+        "problema_resuelto": "Eliminated cognitive friction in enterprise management tools via immediate tactile feedback and intuitive hierarchy.",
+        "quote_persona5": "If a user makes an error, the fault lies with the system's architecture of incentives.",
+        "skills": [
+          "Game Systems Design",
+          "Incentive Economics",
+          "Interface Ergonomics (UI/UX)",
+          "Uncertainty Handling"
+        ],
+        "metrica_clave": "-65% Friction",
+        "metrica_desc": "Reduction in onboarding time on complex software systems"
+      },
+      {
+        "numero": "04",
+        "periodo": "2024 - Present",
+        "titulo": "B2B Architecture, Event Sourcing & Applied AI",
+        "rol": "Software Architect & Systems Engineer // Applied AI",
+        "badge": "SW QUALITY RESEARCHER // .NET & PYTHON",
+        "narrativa": "Today, all disciplines converge: I spearheaded OcioStore in .NET/C# under a strict 4-Tier architecture for bulk retail management, joined UNNE's Software Quality Research Group, and completed my degree defending my Final Thesis: an educational gamification ecosystem powered by generative AI with CQRS and Event Sourcing.",
+        "problema_resuelto": "Replaced error-prone manual workflows with transactional architectures and AI agent process automation.",
+        "quote_persona5": "Artificial Intelligence does not replace engineering: it demands that architecture be twice as rigorous.",
+        "skills": [
+          "C# / .NET 8",
+          "CQRS & Event Sourcing",
+          "AI Agent Orchestration",
+          "SQL Server / PostgreSQL"
+        ],
+        "metrica_clave": "99.4% Factual",
+        "metrica_desc": "Guaranteed precision and consistency across inference pipelines"
+      }
+    ]
+  },
+  "ui_contacto": {
+    "titulo": "FAST CONTACT TERMINAL // COMMS DECK",
+    "subtitulo": "Direct channels for technical recruiters, engineering leads, and B2B projects",
+    "badge_disponibilidad": "STATUS: OPEN FOR OPPORTUNITIES (REMOTE / HYBRID)",
+    "roles_buscados": "Target roles: Software Engineer, Full-Stack Developer, Applied AI Engineer, or Technical Artist",
+    "btn_enviar_email": "[► SEND DIRECT EMAIL]",
+    "btn_copiar_email": "[COPY EMAIL]",
+    "email_copiado": "Email copied to clipboard!",
+    "linkedin_label": "LINKEDIN // PROFESSIONAL PROFILE",
+    "github_label": "GITHUB // REPOSITORIES & CODE",
+    "btn_descargar_cv": "[DOWNLOAD OFFICIAL CV IN PDF]",
+    "btn_cerrar": "[ CLOSE ✕ ]",
+    "nota_respuesta": "Estimated response time: under 24 hours."
+  },
+  "ui_guia_3d": {
+    "titulo_mision": "CASE #01: THE DETECTIVE'S OFFICE",
+    "subtitulo_mision": "Inspect the interactive evidence items across the detective desk.",
+    "badge_tutorial": "INVESTIGATION OBJECTIVES",
+    "btn_escaner_on": "[ SCANNER: ON ]",
+    "btn_escaner_off": "[ SCANNER: OFF ]",
+    "btn_minimizar": "[ _ ]",
+    "btn_expandir": "[ ? INVESTIGATION GUIDE ]",
+    "progreso": "EVIDENCE:",
+    "completado": "ALL EVIDENCE INSPECTED!",
+    "obj_monitor": "CRT Monitor",
+    "obj_monitor_desc": "Switch to Tactical B2B Plain Mode",
+    "obj_cv": "Central Dossier",
+    "obj_cv_desc": "Resume Dossier & Career History (CV)",
+    "obj_proyectos": "Side Dossier",
+    "obj_proyectos_desc": "Case Studies & Technical Architecture",
+    "obj_lampara": "Desk Lamp",
+    "obj_lampara_desc": "Toggle Day / Night lighting",
+    "obj_parlante": "Vintage Radio",
+    "obj_parlante_desc": "Ambient Noir Jazz music",
+    "tooltip_clic": "Click to inspect",
+    "atajos_teclado": "Shortcuts: [1] Monitor · [2] CV · [3] Projects · [L] Lamp · [M] Music · [V] Detective Vision"
+  },
+  "ui_easter_egg": {
+    "pista_secreta": "SYS.REV // 1947",
+    "tooltip_pista": "Technical revision #1947 (Shortcut: type 'noir' on your keyboard)",
+    "modal_badge": "CONFIDENTIAL DOSSIER UNLOCKED",
+    "modal_titulo": "DETECTIVE NOIR STYLE UNLOCKED",
+    "modal_desc": "You decrypted confidential revision #1947. The Detective Noir atmosphere (amber tones, venetian blinds, and analog research notes) is now available system-wide.",
+    "modal_instruccion": "You can toggle between Cyber Phosphor and Detective Noir using the HUD switcher.",
+    "btn_aplicar_noir": "[ APPLY NOIR STYLE ]",
+    "btn_quedar_cyber": "[ KEEP CYBER PHOSPHOR ]",
+    "btn_toggle_noir": "[ THEME: NOIR ]",
+    "btn_toggle_cyber": "[ THEME: CYBER ]",
+    "toast_activo_noir": "Detective Noir aesthetic active globally",
+    "toast_activo_cyber": "Cyber Phosphor aesthetic active globally"
   }
 }
